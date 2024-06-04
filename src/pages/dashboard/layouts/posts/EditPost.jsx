@@ -3,6 +3,7 @@ import EditorBox from "../../../../components/EditorBox";
 import { toast } from "react-toastify";
 import axios from "../../../../api/axios";
 import useAuth from "../../../../hooks/useAuth";
+import {  useNavigate } from "react-router-dom";
 
 const EditPost = ({
   editPostData,
@@ -14,7 +15,7 @@ const EditPost = ({
   selectedPostId,
 }) => {
   const { auth, blogCategories } = useAuth();
-
+  const navigate = useNavigate()
   // FUNCTION: ADD SELECTED IMAGES TO POST IMAGE ARRAY
   const handleEditFileChange = (event) => {
     const files = Array.from(event.target.files);
@@ -121,17 +122,18 @@ const EditPost = ({
           <label className="text-[13px]" htmlFor="">
             Post Excerpt
           </label>
-          <input
-            className="border border-[#33333340] outline-none mt-1 block w-full p-3 rounded-[2px]"
-            type="text"
+          <textarea className="border border-[#33333340] outline-none mt-1 block w-full p-3 rounded-[2px]"
+           rows={5}
             value={editPostData?.post_excerpt}
             onChange={(e) =>
               setEditPostData({
                 ...editPostData,
                 post_excerpt: e.target.value,
               })
-            }
-          />
+            }>
+
+              </textarea>
+        
         </div>
 
         <div className="mb-3">
