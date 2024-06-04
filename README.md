@@ -35,8 +35,8 @@ Make sure you have the following software installed:
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/
-   cd blog-project
+   git clone https://github.com/horlathunbhosun/blinqpay-assessment-frontend.git
+   cd blinqpay-assessment-frontend
    ```
 
 2. Install the dependencies:
