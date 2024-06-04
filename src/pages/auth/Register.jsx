@@ -125,7 +125,7 @@ const Register = () => {
               </label>
               <input
                 className="border border-[#33333340] outline-none mt-1 block w-full p-3 rounded-[2px]"
-                type="text"
+                type="password"
                 value={password}
                 onChange={(e) => {
                   setRegisterData({
@@ -142,7 +142,7 @@ const Register = () => {
               </label>
               <input
                 className="border border-[#33333340] outline-none mt-1 block w-full p-3 rounded-[2px]"
-                type="text"
+                type="password"
                 value={password_confirmation}
                 onChange={(e) => {
                   setRegisterData({
